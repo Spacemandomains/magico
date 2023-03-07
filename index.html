@@ -3,47 +3,21 @@
   <head>
     <title>Random Squares</title>
     <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      
       .square {
         display: inline-block;
-        background-color: #f1c40f;
         margin: 10px;
         border-radius: 10px;
-      }
-      
-      /* Define different sizes for the squares */
-      .square:nth-child(1) {
-        width: 100px;
-        height: 100px;
-      }
-      
-      .square:nth-child(2) {
-        width: 50px;
-        height: 50px;
-      }
-      
-      .square:nth-child(3) {
-        width: 80px;
-        height: 80px;
-      }
-      
-      .square:nth-child(4) {
-        width: 120px;
-        height: 120px;
-      }
-      
-      .square:nth-child(5) {
-        width: 70px;
-        height: 70px;
-      }
-      
-      .square:nth-child(6) {
-        width: 90px;
-        height: 90px;
-      }
-      
-      .square:nth-child(7) {
-        width: 60px;
-        height: 60px;
+        width: 200px;
+        height: 200px;
+        background-color: #ddd;
+        background-size: cover;
       }
       
       /* Randomize the vertical order of the squares */
@@ -63,10 +37,27 @@
   </head>
   <body>
     <div class="container">
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <div class="square"></div>
-      <div
+      <div class="square" style="background-image: url('https://picsum.photos/id/1015/200/200')">
+        <a href="https://www.google.com"></a>
+      </div>
+      <div class="square" style="background-image: url('https://picsum.photos/id/1016/200/200')">
+        <a href="https://www.facebook.com"></a>
+      </div>
+      <div class="square" style="background-image: url('https://picsum.photos/id/1018/200/200')">
+        <a href="https://www.twitter.com"></a>
+      </div>
+      <div class="square" style="background-image: url('https://picsum.photos/id/1020/200/200')">
+        <a href="https://www.linkedin.com"></a>
+      </div>
+      <div class="square" style="background-image: url('https://picsum.photos/id/1022/200/200')">
+        <a href="https://www.instagram.com"></a>
+      </div>
+      <div class="square" style="background-image: url('https://picsum.photos/id/1023/200/200')">
+        <a href="https://www.github.com"></a>
+      </div>
+      <div class="square" style="background-image: url('https://picsum.photos/id/1024/200/200')">
+        <a href="https://www.youtube.com"></a>
+      </div>
+    </div>
+  </body>
+</html>
