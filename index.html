@@ -1,53 +1,58 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Center Grid of Seven Squares</title>
-	<style type="text/css">
-		body {
-			margin: 0;
-			padding: 0;
-			font-family: Arial, sans-serif;
-			background-color: #f5f5f5;
-		}
-		
-		.container {
-			max-width: 960px;
-			margin: 0 auto;
-			padding: 20px;
-		}
-		
-		.square {
-			display: inline-block;
-			margin: 0 10px;
-			background-color: #ffffff;
-			border: 1px solid #dddddd;
-		}
-		
-		.small {
-			width: 50px;
-			height: 50px;
-		}
-		
-		.medium {
-			width: 100px;
-			height: 100px;
-		}
-		
-		.large {
-			width: 150px;
-			height: 150px;
-		}
-	</style>
-</head>
-<body>
-	<div class="container">
-		<div class="square small"></div>
-		<div class="square medium"></div>
-		<div class="square large"></div>
-		<div class="square medium"></div>
-		<div class="square small"></div>
-		<div class="square large"></div>
-		<div class="square medium"></div>
-	</div>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Square Grid with Random Sizes</title>
+    <style>
+      /* Define the grid container */
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+        grid-gap: 10px;
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+      }
+      
+      /* Define the grid items */
+      .grid-item {
+        background-color: lightblue;
+        border: 1px solid black;
+      }
+      
+      /* Define the different sizes */
+      .small {
+        grid-column-end: span 2;
+        grid-row-end: span 2;
+      }
+      
+      .medium {
+        grid-column-end: span 3;
+        grid-row-end: span 3;
+      }
+      
+      .large {
+        grid-column-end: span 4;
+        grid-row-end: span 4;
+      }
+      
+      .larger {
+        grid-column-end: span 5;
+        grid-row-end: span 5;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <div class="grid-container">
+      <div class="grid-item small"></div>
+      <div class="grid-item medium"></div>
+      <div class="grid-item large"></div>
+      <div class="grid-item larger"></div>
+      <div class="grid-item small"></div>
+      <div class="grid-item medium"></div>
+      <div class="grid-item large"></div>
+    </div>
+  </body>
 </html>
