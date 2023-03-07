@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.square {
+  position: relative;
+  margin: 10px;
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+  background-color: #ddd;
+  background-size: cover;
+}
+
+.square:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 2px;
+  background-color: #000;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  z-index: -1;
+}
+
+.container > div {
+  flex: 0 0 calc(33.33% - 20px);
+  order: calc(1 + (7 - 1) * rand());
+}
+
+@function rand() {
+  @return random();
+}
