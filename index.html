@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random Squares</title>
+    <style>
+      .square {
+        display: inline-block;
+        background-color: #f1c40f;
+        margin: 10px;
+        border-radius: 10px;
+      }
+      
+      /* Define different sizes for the squares */
+      .square:nth-child(1) {
+        width: 100px;
+        height: 100px;
+      }
+      
+      .square:nth-child(2) {
+        width: 50px;
+        height: 50px;
+      }
+      
+      .square:nth-child(3) {
+        width: 80px;
+        height: 80px;
+      }
+      
+      .square:nth-child(4) {
+        width: 120px;
+        height: 120px;
+      }
+      
+      .square:nth-child(5) {
+        width: 70px;
+        height: 70px;
+      }
+      
+      .square:nth-child(6) {
+        width: 90px;
+        height: 90px;
+      }
+      
+      .square:nth-child(7) {
+        width: 60px;
+        height: 60px;
+      }
+      
+      /* Randomize the vertical order of the squares */
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .container > div {
+        order: calc(1 + (7 - 1) * rand());
+      }
+      
+      @function rand() {
+        @return random();
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div
