@@ -1,55 +1,53 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Random Squares</title>
-    <style>
-      body {
-        height: 100vh;
-      }
-
-      .container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-      }
-      
-      .square {
-        position: relative;
-        margin: 10px;
-        border-radius: 10px;
-        width: 200px;
-        height: 200px;
-        background-color: #ddd;
-        background-size: cover;
-      }
-      
-      .square:before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 200%;
-        height: 2px;
-        background-color: #000;
-        transform: translate(-50%, -50%) rotate(-45deg);
-        z-index: -1;
-      }
-      
-      .container > div {
-        flex: 0 0 calc(33.33% - 20px);
-        order: calc(1 + (7 - 1) * rand());
-      }
-      
-      @function rand() {
-        @return random();
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="square" style="background-image: url('https://picsum.photos/id/1015/200/200')">
-        <a href="https://www.google.com"></a>
-      </div>
-     
+<head>
+	<title>Center Grid of Seven Squares</title>
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+			background-color: #f5f5f5;
+		}
+		
+		.container {
+			max-width: 960px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+		
+		.square {
+			display: inline-block;
+			margin: 0 10px;
+			background-color: #ffffff;
+			border: 1px solid #dddddd;
+		}
+		
+		.small {
+			width: 50px;
+			height: 50px;
+		}
+		
+		.medium {
+			width: 100px;
+			height: 100px;
+		}
+		
+		.large {
+			width: 150px;
+			height: 150px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="square small"></div>
+		<div class="square medium"></div>
+		<div class="square large"></div>
+		<div class="square medium"></div>
+		<div class="square small"></div>
+		<div class="square large"></div>
+		<div class="square medium"></div>
+	</div>
+</body>
+</html>
